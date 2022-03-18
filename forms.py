@@ -2,7 +2,7 @@ from wtforms import Form, StringField, TextAreaField, PasswordField, validators,
 from wtforms.validators import DataRequired, Length, ValidationError
 from flask_wtf import FlaskForm
 from wtforms.fields import html5, simple
-from mysql_util import MysqlUtil
+from utils import MysqlUtil
 
 #登录用户类
 # Login Form Class

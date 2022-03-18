@@ -2,9 +2,16 @@ from flask import Flask, render_template, flash, redirect, url_for, session, req
 from functools import wraps
 from utils import *
 from forms import LoginForm, ArticleForm, RegisterForm
+from models import *
+from setting import *
 
-app = Flask(__name__) # 创建应用
+app = Flask(__name__, static_folder="static") # 创建应用
 app.config['SECRET_KEY'] = 'dokea'
+
+app.config.from_object(MySQLConfig)
+with app.app_context():
+	db.init_app(app)
+	db.create_all()
 
 # 首页
 @app.route('/')
