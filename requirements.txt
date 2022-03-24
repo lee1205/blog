@@ -4,3 +4,8 @@ Flask_WTF==0.14.3
 passlib==1.7.1
 PyMySQL==0.9.3
 WTForms==2.2.1
+Click==7.0
+itsdangerous==1.1.0
+Jinja2==2.10
+MarkupSafe==1.1.0
+Werkzeug==0.14.1
