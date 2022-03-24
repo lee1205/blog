@@ -11,3 +11,12 @@
 
 后端依赖
 1、Flask
+2、Flask_SQLAlchemy
+3、Flask_WTF
+4、passlib
+5、PyMySQL
+6、WTForms
+7、Jinja2
+8、Werkzeug
+9、MarkupSafe
+10、itsdangerous
