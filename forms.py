@@ -55,7 +55,7 @@ class RegisterForm(FlaskForm):
         label='重复密码',
         validators=[
             validators.DataRequired(message='重复密码不能为空.'),
-            validators.EqualTo('pwd', message="两次密码输入不一致")
+            validators.EqualTo('passsword', message="两次密码输入不一致")
         ],
         widget=widgets.PasswordInput(),
         render_kw={'class': 'form-control'}
@@ -77,10 +77,6 @@ class RegisterForm(FlaskForm):
         result = db.fetchone(sql) # 获取一条记录
         if result:
             raise ValidationError("用户名已经存在")
-
-    def validate_password(self, field):
-        if field.data != self.data('password'):
-            raise ValidationError("密码不一致")
 
 #文章类
 # Article Form Class
